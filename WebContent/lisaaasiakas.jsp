@@ -16,10 +16,10 @@
 	<form id="tiedot">
 		<table>
 			<thead>
+
 				<tr>
 					<th colspan="5" class="oikealle"><span id="takaisin">Takaisin
-							listaukseen</span>
-					<th>
+							listaukseen</span></th>
 				</tr>
 				<tr>
 					<th>Etunimi</th>
@@ -44,9 +44,7 @@
 	<span id="ilmo"></span>
 </body>
 
-</body>
 <script>
-
 	$(document).ready(function() {
 		$("#takaisin").click(function() {
 			document.location = "listaaasiakkaat.jsp";
@@ -64,21 +62,19 @@
 				},
 				puhelin : {
 					required : true,
-					number: true,
+					number : true,
 					minlength : 10,
-					maxlength: 13
-					
+					maxlength : 13
+
 				},
 				sposti : {
 					required : true,
-					email: true
-				},
-				submiHandler : function(form) {
-					lisaaTiedot();
+					email : true
 				}
+
 			},
 
-			message : {
+			messages : {
 				etunimi : {
 					required : "Puuttuu",
 					minlength : "Liian lyhyt"
@@ -99,7 +95,7 @@
 				}
 			},
 			submitHandler : function(form) {
-				lisaaTiedot()
+				lisaaTiedot();
 			}
 		});
 	});
@@ -118,7 +114,8 @@
 					$("#ilmo").html("Asiakkaan lis‰‰minen onnistui.");
 					$("#etunimi", "#sukunimi", "#puhelin", "#sposti").val("");
 				}
-			}});
+			}
+		});
 	}
 </script>
 
